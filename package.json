@@ -1,0 +1,26 @@
+{
+  "name": "12-css",
+  "version": "1.0.0",
+  "description": "css training",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/przemskydev/styles.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Przemskydev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/przemskydev/styles/issues"
+  },
+  "homepage": "https://github.com/przemskydev/styles#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

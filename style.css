@@ -1,0 +1,16 @@
+html {
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  color: coral
+}
+
+span p {
+  color: blue;
+} 
+
+li div span p {
+  color: green;
+}
