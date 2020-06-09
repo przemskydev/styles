@@ -7,6 +7,13 @@
 html {
   font-size: 25px;
   font-family: Helvetica, sans-serif;
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
 
 p {
@@ -69,4 +76,95 @@ button {
   height: 50px;
   transform: skew(20deg);
   background: red;
+}
+
+[data-status] {
+  color: pink;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+[data-status="cancel"] {
+  color: red;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+a:hover {
+  background-color: red;
+}
+
+h1 {
+  color: #777;
+  font-size: 48px;
+}
+
+h1::first-letter {
+  color: #555;
+  font-size: 65px;
+}
+
+li span p::before,
+li span p::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+li span p::before {
+  background-color: black;
+  border-radius: 50%;
+}
+
+li span p::after {
+  background-color: yellow;
+  border-radius: 20%;
+}
+
+.one {
+  font-size: 1em;
+}
+
+.two {
+  font-size: 1rem;
+}
+
+.tre {
+  font-size: 25px;
+}
+
+table {
+  width: 50%;
+  text-align: center;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid red;
+}
+
+th {
+  background-color: yellowgreen;
+  border: 2px solid goldenrod;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+tr:nth-child(odd) {
+  background: #fff;
+}
+
+.box {
+  width: calc(100% - 400px);
+  height: 200px;
+  background-color: indigo;
+  margin: 20px;
+  transform: translateX(150px);
+}
+
+img {
+  transform: perspective(300px) rotateY(20deg) rotateX(30deg) translateX(250px);
 }

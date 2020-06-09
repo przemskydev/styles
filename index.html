@@ -5,21 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Styles</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
+
 </head>
 
 <body>
   <nav class="navigation">
     <ul>
-      <li>Lorem</li>
+      <li data-status="cancel">Lorem</li>
       <li>ipsum</li>
       <li>dolor</li>
-      <li>sit</li>
+      <li data-status>sit</li>
       <li>amet</li>
     </ul>
     <button>Log</button>
   </nav>
   <section>
+    <h1>Test Title</h1>
+    <section>
+      <table>
+        <caption>Table style test</caption>
+        <thead>
+          <tr>
+            <th>Lp</th>
+            <th>Name</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>sdf</td>
+            <td>fdasfsdaf</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>sdf</td>
+            <td>fdasfsdaf</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>sdf</td>
+            <td>fdasfsdaf</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>sdf</td>
+            <td>fdasfsdaf</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <div class="box">
+
+      </div>
+      <img src="https://picsum.photos/800/500">
+    </section>
     <ul class="list-item">
       <li>
         <span>
@@ -46,9 +89,14 @@
     </ul>
     <footer>
       <div>
-        <p>dolor et color</p>
+        <p>dolor et <a>color</a></p>
       </div>
     </footer>
+  </section>
+  <section>
+    <p class='one'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere ullamcorper nunc. Curabitur sagittis in erat at tempus. Praesent vel erat ut ex pulvinar eleifend vestibulum vel enim. Phasellus consequat augue ipsum, quis fringilla magna accumsan eu. Curabitur luctus leo eu ex pretium, dictum varius turpis sagittis.</p>
+    <p class='two'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere ullamcorper nunc. Curabitur sagittis in erat at tempus. Praesent vel erat ut ex pulvinar eleifend vestibulum vel enim. Phasellus consequat augue ipsum, quis fringilla magna accumsan eu. Curabitur luctus leo eu ex pretium, dictum varius turpis sagittis.</p>
+    <p class='tre'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum posuere ullamcorper nunc. Curabitur sagittis in erat at tempus. Praesent vel erat ut ex pulvinar eleifend vestibulum vel enim. Phasellus consequat augue ipsum, quis fringilla magna accumsan eu. Curabitur luctus leo eu ex pretium, dictum varius turpis sagittis.</p>
   </section>
 </body>
 
