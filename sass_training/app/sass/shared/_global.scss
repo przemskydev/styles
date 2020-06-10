@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media all and (min-width: $sm-min){
+  .container {
+    width: 750px;
+  }
+}
+
+@media all and (min-width: $md-min){
+  .container {
+    width: 970px;
+  }
+}
+
+@media all and (min-width: $lg-min){
+  .container {
+    width: 1170px;
+  }
+}
