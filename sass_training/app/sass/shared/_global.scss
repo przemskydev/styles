@@ -1,5 +1,6 @@
 html, body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
@@ -9,20 +10,29 @@ html, body {
   padding-left: 15px;
 }
 
+.block {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-margin {
+  margin: 0 15px;
+}
+
 @media all and (min-width: $sm-min){
   .container {
-    width: 750px;
+    width: 720px;
   }
 }
 
 @media all and (min-width: $md-min){
   .container {
-    width: 970px;
+    width: 945px;
   }
 }
 
 @media all and (min-width: $lg-min){
   .container {
-    width: 1170px;
+    width: 1150px;
   }
 }
