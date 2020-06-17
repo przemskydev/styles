@@ -116,7 +116,7 @@
     &__description {
       position: static;
       flex: 1 0 100%;
-      margin: 50px 0; 
+      margin: 50px 0;
 
       &-input:checked {
         + .pros-cons__description-group {
@@ -124,7 +124,7 @@
             border-radius: 25px 0 0 25px;
             box-shadow: 0 0;
           }
-          .pros-cons__description-text{
+          .pros-cons__description-text {
             width: 100%;
             opacity: 1;
             border-radius: 0 25px 25px 0;
@@ -136,7 +136,7 @@
         justify-content: center;
         align-items: center;
       }
-      &-counter{
+      &-counter {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -146,9 +146,9 @@
         border-radius: 25px;
         cursor: pointer;
         box-shadow: 0 0 10px $main-color-dark;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
-      &-text{
+      &-text {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -162,12 +162,35 @@
         border: 2px solid $main-color-dark;
         box-sizing: border-box;
         cursor: pointer;
-        transition: all .5s ease-in-out; 
-       }
+        transition: all 0.5s ease-in-out;
+      }
     }
 
     &:nth-of-type(2) {
       flex-direction: row-reverse;
+    }
+  }
+}
+
+@media all and (min-width: $lg-min) {
+  .pros-cons {
+    &__description {
+      &-group {
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+  }
+
+  .pros {
+    .pros-cons__description-label {
+      @include aligment("pros-cons__description-group", 1, 4);
+    }
+  }
+
+  .cons {
+    .pros-cons__description-label {
+      @include aligment-reverse("pros-cons__description-group", 1, 4);
     }
   }
 }

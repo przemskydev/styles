@@ -27,10 +27,10 @@
   @for $i from $start through $end {
     .#{$class}_#{$i} {
       @if $i == 3 {
-        background: rgba(204, 102, 153, 1/($i + 1));
+        background: rgba(204, 102, 153, 1/ ($i + 1));
         color: $main-color-light;
       } @else {
-        background: rgba(204, 102, 153, 1/$i);
+        background: rgba(204, 102, 153, 1 / $i);
         color: $main-color-light;
       }
     }
@@ -40,7 +40,29 @@
 @mixin border($class, $numbers) {
   @each $i in $numbers {
     .#{$class}_#{$i} {
-      border: 2px solid rgba(204, 102, 153, 1/$i)
+      border: 2px solid rgba(204, 102, 153, 1 / $i);
     }
+  }
+}
+
+@mixin aligment($class, $i, $end) {
+  @while $i < $end {
+    &:nth-of-type(#{$i}) {
+      .#{$class} {
+        justify-content: map-get($aligment, $i);
+      }
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin aligment-reverse($class, $i, $end) {
+  @while $i < $end {
+    &:nth-last-of-type(#{$i}) {
+      .#{$class} {
+        justify-content: map-get($aligment, $i);
+      }
+    }
+    $i: $i + 1;
   }
 }
