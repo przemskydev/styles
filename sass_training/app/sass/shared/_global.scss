@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.block {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-margin {
+  margin: 0 15px;
+}
+
+@media all and (min-width: $sm-min){
+  .container {
+    width: 720px;
+  }
+}
+
+@media all and (min-width: $md-min){
+  .container {
+    width: 945px;
+  }
+}
+
+@media all and (min-width: $lg-min){
+  .container {
+    width: 1150px;
+  }
+}

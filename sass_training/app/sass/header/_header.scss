@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  height: 75px;
+  z-index: 10;
+  background: $backgroud-header;
+  box-shadow: 0 0 10px $main-color-dark;
+
+  //&-refers to a paren, i.e. header (.header__container === &__container)
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+  }
+
+  //i.e. === .header__logo-item
+  &__logo {
+    &-item {
+      width: 50px;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media all and (min-width: $sm-min) {
+  .header {
+    &__logo {
+      &-item {
+        width: 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  
+  &__image {
+    width: 100%;
+    display: block;
+
+    &-item {
+      display: block;
+      margin: 0 auto;
+      width: 250px;
+    }
+  }
+
+  &__description {
+
+    &-paragraph{
+      color: $main-color-dark;
+      font: 400 20px/28px $main-font
+    }
+
+    &-button {
+      @include button(50%, 35px auto, 30px, 30px)
+    }
+  }
+}
+
+@media all and (min-width: $md-min){
+  .introduction {
+    flex-direction: row;
+
+    &__image {
+      width: 50%;
+    }
+
+    &__description {
+      width: 50%;
+    }
+  }
+}
