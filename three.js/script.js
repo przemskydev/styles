@@ -1,7 +1,9 @@
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(24, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(20, window.innerWidth / window.innerHeight, 0.0001, 10000);
+camera.position.set(0, 0, 50);
 const renderer = new THREE.WebGLRenderer({
-  antialias: true
+  antialias: true,
+  alpha: true //background true==white
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
@@ -35,18 +37,26 @@ scene.add(light);
 scene.add(light2);
 
 
-camera.position.z = 7;
-
 cube.rotation.x = 20;
 cube.rotation.z = -20;
 
-const animate = () => {
-  requestAnimationFrame(animate);
-  
+const handleResize = () => {
+  //dopasowanie rozmiaru okna przy wszelkich zmianach 
+  const { innerWidth, innerHeight } = window;
+  renderer.setSize(innerWidth, innerHeight);
+  // zmiana aspektu kamery oraz update aby kamera nabrała nowych właściwości (aspekt)
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+}
+
+const loop = () => {
+  requestAnimationFrame(loop);
+
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
-  
+
   renderer.render(scene, camera);
 };
 
-animate();
+loop();
+window.addEventListener("resize", handleResize)
